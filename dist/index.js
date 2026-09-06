@@ -1,9 +1,9 @@
-"use strict";var l=function(e,i){return function(){try{return i||e((i={exports:{}}).exports,i),i.exports}catch(t){throw (i=0, t)}};};var m=l(function(M,I){
-var k=require('@stdlib/strided-base-reinterpret-complex64/dist'),j=require('@stdlib/complex-float32-real/dist'),x=require('@stdlib/complex-float32-imag/dist');function z(e,i,t,s,v,f,h){var u,n,q,o,a,y,R,p,r,c;if(e<=0)return v;if(u=j(i),n=x(i),q=j(t),o=x(t),a=k(v,0),p=f*2,r=h*2,e===1)return s?(a[r]=q,a[r+1]=o):(a[r]=u,a[r+1]=n),v;for(a[r]=u,a[r+1]=n,r+=p,s&&(e-=1),y=(q-u)/e,R=(o-n)/e,c=1;c<e;c++)a[r]=u+y*c,a[r+1]=n+R*c,r+=p;return s&&(a[r]=q,a[r+1]=o),v}I.exports=z
-});var g=l(function(P,_){
-var A=require('@stdlib/strided-base-stride2offset/dist'),B=m();function C(e,i,t,s,v,f){return B(e,i,t,s,v,f,A(e,f))}_.exports=C
-});var O=l(function(Q,E){
-var D=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),w=g(),F=m();D(w,"ndarray",F);E.exports=w
-});var G=require("path").join,H=require('@stdlib/utils-try-require/dist'),J=require('@stdlib/assert-is-error/dist'),K=O(),d,b=H(G(__dirname,"./native.js"));J(b)?d=K:d=b;module.exports=d;
+"use strict";var d=function(a,i){return function(){try{return i||a((i={exports:{}}).exports,i),i.exports}catch(t){throw (i=0, t)}};};var y=d(function(Q,g){
+var z=require('@stdlib/strided-base-reinterpret-complex64/dist'),I=require('@stdlib/complex-float32-real/dist'),_=require('@stdlib/complex-float32-imag/dist'),v=require('@stdlib/number-float64-base-to-float32/dist');function A(a,i,t,u,s,q,k){var n,c,o,p,e,j,x,l,r,m,f;if(a<=0)return s;if(n=I(i),c=_(i),o=I(t),p=_(t),e=z(s,0),l=q*2,r=k*2,a===1)return u?(e[r]=o,e[r+1]=p):(e[r]=n,e[r+1]=c),s;for(e[r]=n,e[r+1]=c,r+=l,u&&(a-=1),m=v(a),j=v(v(o-n)/m),x=v(v(p-c)/m),f=1;f<a;f++)e[r]=v(n+v(j*f)),e[r+1]=v(c+v(x*f)),r+=l;return u&&(e[r]=o,e[r+1]=p),s}g.exports=A
+});var E=d(function(S,w){
+var B=require('@stdlib/strided-base-stride2offset/dist'),C=y();function D(a,i,t,u,s,q){return C(a,i,t,u,s,q,B(a,q))}w.exports=D
+});var b=d(function(T,O){
+var F=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),M=E(),G=y();F(M,"ndarray",G);O.exports=M
+});var H=require("path").join,J=require('@stdlib/utils-try-require/dist'),K=require('@stdlib/assert-is-error/dist'),L=b(),R,h=J(H(__dirname,"./native.js"));K(h)?R=L:R=h;module.exports=R;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
